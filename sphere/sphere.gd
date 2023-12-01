@@ -1,6 +1,7 @@
 @tool
 extends MeshInstance3D
 
+
 var rings = 50
 var radial_segments = 50
 
@@ -12,7 +13,6 @@ var radial_segments = 50
 		generate_sphere()
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	generate_sphere()
 
@@ -78,8 +78,3 @@ func generate_sphere():
 	# No blendshapes, lods, or compression used.
 	mesh.clear_surfaces()
 	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, surface_array)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
